@@ -137,6 +137,7 @@ body {
 .container {
   width: 800px;
   margin: auto;
+  font-family: Arial, "sans-serif";
 }
 header {
   margin: 20px 0;

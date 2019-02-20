@@ -61,11 +61,30 @@ html, body {
 
 // -------------- MY CODE --------------
 
+// Variables
+@font-stack: Arial, "sans-serif";
+
+@tablet: (max-width: 800px);
+@mobile: (max-width: 500px);
+
+.button() {
+	border: 1px solid black;
+	border-radius: 2px;
+	padding: 10px 20px;
+}
+
+.center() {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 // Container
 
 .container {
 	width: 800px;
 	margin: auto;
+	font-family: @font-stack;
 }
 
 // Header and Navbar
