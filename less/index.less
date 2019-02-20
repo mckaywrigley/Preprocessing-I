@@ -64,13 +64,17 @@ html, body {
 // Variables
 @font-stack: Arial, "sans-serif";
 
-@tablet: (max-width: 800px);
+@tablet: (max-width: 850px);
 @mobile: (max-width: 500px);
 
 .button() {
 	border: 1px solid black;
-	border-radius: 2px;
+	border-radius: 10px;
 	padding: 10px 20px;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: bold;
+	margin: 10px 0;
 }
 
 .center() {
@@ -82,22 +86,35 @@ html, body {
 // Container
 
 .container {
-	width: 800px;
+	width: 90%;
 	margin: auto;
 	font-family: @font-stack;
+
+	@media @tablet {
+		width: 500px;
+	}
+
+	@media @mobile {
+		width: 300px;
+	}
+
+	p {
+		line-height: 1.1;
+	}
+
 }
 
-// Header and Navbar
+// Header
 
 header {
-	margin: 20px 0;
 	border-bottom: 1px solid black;
 
+	// Navbar
+
 	nav {
-		display: flex;
+		.center();
 		flex-wrap: wrap;
-		justify-content: center;
-		align-items: center;
+		padding: 20px 0;
 	}
 	
 	a {
@@ -105,6 +122,17 @@ header {
 		color: black;
 		cursor: pointer;
 		margin: 0 50px;
+
+		@media @tablet {
+			margin: 0 20px;
+		}
+
+		@media @mobile {
+			width: 100%;
+			.center();
+			border-bottom: 1px solid black;
+			padding: 10px 0;
+		}
 	}
 
 	nav a:hover {
@@ -116,27 +144,34 @@ header {
 // Intro 
 
 .intro {
-	margin: 20px 0;
 
 	img {
 		width: 100%;
+		height: auto;
 		margin: 10px 0;
 	}
 
 	h1 {
 		text-align: center;
-		margin: 10px 0;
+		margin: 20px 0;
 		font-size: 40px;
+		font-family: 'Oswald', sans-serif;
+
+		@media @mobile {
+			font-size: 26px;
+		}
 	}
 
 	h2 {
 		text-align: center;
+		margin: 20px 0;
 		font-size: 24px;
 	}
 
 	p {
 		text-align: left;
-		margin: 10px 0;
+		text-align: center;
+		margin: 20px 0;
 	}
 }
 
@@ -145,14 +180,13 @@ header {
 .resume {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
 	margin: 20px 0;
 }
 
-.resume-item {
+.resume-section {
 	width: 100%;
 	margin: 20px 0;
-	border: 1px solid black;
+	border-bottom: 1px solid black;
 	padding: 10px 20px;
 
 	h2 {
@@ -163,7 +197,80 @@ header {
 	p {
 		margin: 10px 0;
 	}
+
+	a {
+		text-decoration: underline;
+		color: black;
+		cursor: pointer;
+	}
 }
+
+// Resume Items Container
+.resume-item-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+// Resume Items
+.resume-item {
+	border: 1px solid black;
+	margin: 20px 0;
+	padding: 10px 20px;
+	border-radius: 10px;
+	width: 48%;
+
+	@media @mobile {
+		width: 100%;
+	}
+
+	h3 {
+		font-size: 20px;
+		margin: 10px 0;
+
+		@media @mobile {
+			text-align: center;
+		}
+	}
+
+	h4 {
+		font-size: 18px;
+		margin: 10px 0;
+
+		@media @mobile {
+			text-align: center;
+		}
+	}
+
+	li {
+		list-style: square;
+		margin: 20px 0 20px 20px;
+	}
+
+	.resume-item-button {
+		.button();
+
+		@media @mobile {
+			width: 100%;
+			padding: 5px;
+		}
+	}
+}
+
+// Contact
+
+.contact {
+	text-align: center;
+}
+
+// Font Awesome Icons
+i {
+	color: black;
+	font-size: 50px;
+	margin: 20px;
+}
+
+// Footer
 
 footer {
 	margin: 20px 0;
