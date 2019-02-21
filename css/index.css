@@ -1,1 +1,307 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+.container {
+  width: 90%;
+  margin: auto;
+  font-family: Arial, "sans-serif";
+}
+@media (max-width: 850px) {
+  .container {
+    width: 500px;
+  }
+}
+@media (max-width: 500px) {
+  .container {
+    width: 300px;
+  }
+}
+.container p {
+  line-height: 1.1;
+}
+header {
+  border-bottom: 1px solid black;
+}
+header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
+header a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  margin: 0 50px;
+}
+@media (max-width: 850px) {
+  header a {
+    margin: 0 20px;
+  }
+}
+@media (max-width: 500px) {
+  header a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid black;
+    padding: 10px 0;
+  }
+}
+header nav a:hover {
+  text-decoration: underline;
+}
+.intro img {
+  width: 100%;
+  height: auto;
+  margin: 10px 0;
+}
+.intro h1 {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 40px;
+  font-family: 'Oswald', sans-serif;
+}
+@media (max-width: 500px) {
+  .intro h1 {
+    font-size: 26px;
+  }
+}
+.intro h2 {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 24px;
+}
+.intro p {
+  text-align: left;
+  text-align: center;
+  margin: 20px 0;
+}
+.resume {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+.resume-section {
+  width: 100%;
+  margin: 20px 0;
+  border-bottom: 1px solid black;
+  padding: 10px 20px;
+}
+.resume-section h2 {
+  margin: 5px 0;
+  font-size: 24px;
+}
+.resume-section p {
+  margin: 10px 0;
+}
+.resume-section a {
+  text-decoration: underline;
+  color: black;
+  cursor: pointer;
+}
+.resume-item-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.resume-item {
+  border: 1px solid black;
+  margin: 20px 0;
+  padding: 10px 20px;
+  border-radius: 10px;
+  width: 48%;
+}
+@media (max-width: 500px) {
+  .resume-item {
+    width: 100%;
+  }
+}
+.resume-item h3 {
+  font-size: 20px;
+  margin: 10px 0;
+  border-bottom: 1px solid black;
+  padding-bottom: 5px;
+}
+@media (max-width: 500px) {
+  .resume-item h3 {
+    text-align: center;
+  }
+}
+.resume-item h4 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+@media (max-width: 500px) {
+  .resume-item h4 {
+    text-align: center;
+  }
+}
+.resume-item li {
+  list-style: square;
+  margin: 20px 0 20px 20px;
+}
+.resume-item .resume-item-button {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 10px 0;
+  color: black;
+  background-color: lightgray;
+  font-weight: bold;
+}
+@media (max-width: 500px) {
+  .resume-item .resume-item-button {
+    width: 100%;
+    padding: 5px;
+  }
+}
+.contact {
+  text-align: center;
+}
+i {
+  color: black;
+  font-size: 50px;
+  margin: 20px;
+}
+footer {
+  margin: 20px 0;
+  text-align: center;
+}
